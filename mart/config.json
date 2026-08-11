@@ -1,0 +1,10 @@
+{
+  "listeners": [
+    {
+      "address": "0.0.0.0",
+      "port": 8080,
+      "reusePort": true
+    }
+  ],
+  "db_file": "kishoremart.db"
+}

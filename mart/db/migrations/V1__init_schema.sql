@@ -1,0 +1,2 @@
+-- Reference migration for the capstone.
+-- The Review-1 starter creates the same tables automatically in SQLite.
