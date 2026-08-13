@@ -1,6 +1,6 @@
 # Gandhi Mart
 
-A small campus marketplace capstone demo.
+A small marketplace capstone demo.
 
 ## Required functionality
 - Register / Login
