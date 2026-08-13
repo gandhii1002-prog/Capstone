@@ -1,64 +1,41 @@
-# Gandhi's Mart
+# Gandhi Mart
 
-A full-stack campus marketplace using the supplied Gandhi's Mart frontend and the working C++/Drogon/SQLite backend architecture from CampusMart_Final.
+A small marketplace capstone demo.
 
-## Included
+## Required functionality
+- Register / Login
+- Buyer and Seller roles
+- Seller adds products
+- Buyer browses products
+- Search/filter products
+- Add to cart
+- View cart
+- Place order
+- Mock payment
+- SQLite database with foreign keys
+- C++20 + Drogon
+- Controller -> Service -> Repository structure
 
-- Gandhi's Mart frontend preserved exactly as supplied.
-- Buyer/seller registration and login.
-- Authenticated sessions with bearer tokens.
-- Seller product management.
-- Product search and category filtering.
-- Buyer cart and checkout.
-- SQLite database with foreign keys.
-- Controller -> Service -> Repository backend structure.
-- Drogon API + static frontend served on port 8080.
+## Project structure
 
-## API
+backend/
+  controller/
+  service/
+  repository/
+  model/
+db/schema.sql
+public/
+src/
+CMakeLists.txt
+vcpkg.json
 
-- POST `/api/auth/register`
-- POST `/api/auth/login`
-- GET `/api/auth/me`
-- GET `/api/products`
-- POST `/api/products`
-- PUT `/api/products/{id}`
-- DELETE `/api/products/{id}`
-- GET `/api/cart`
-- POST `/api/cart`
-- POST `/api/orders`
+## Windows setup
 
-## Requirements
+Use **Developer PowerShell for VS 2022** (not a normal PowerShell) so MSVC is available.
 
-C++20, CMake 3.20+, vcpkg, Drogon and SQLite3.
-
-The included `vcpkg.json` declares Drogon and SQLite3.
-
-## macOS / Linux
-
-Set `VCPKG_ROOT` to your vcpkg installation, then from this project folder:
-
-```bash
-cmake --preset default
-cmake --build build
-./build/GandhiMart
-```
-
-Open `http://localhost:8080`.
-
-Without the preset:
-
-```bash
-cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake" -DCMAKE_BUILD_TYPE=Release
-cmake --build build
-./build/GandhiMart
-```
-
-## Windows
-
-Open Developer PowerShell for VS 2022:
+From the project folder:
 
 ```powershell
-cmake --preset windows
 cmake --build build --config Release
 .\build\Release\GandhiMart.exe
 ```
